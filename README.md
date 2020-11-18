@@ -107,17 +107,14 @@ The code looks like this:
          self.port = port
  
      def _create_widgets(self):
-         self.button = Button(self, text = 'Start', command =
-self._Run_Stop)
+         self.button = Button(self, text = 'Start', command = self._Run_Stop)
          self.button.pack(side = TOP)
          self.button_state = 0
  
-         self.text = Text(self, width = 100, height=20, setgrid=True,
-wrap=WORD,
+         self.text = Text(self, width = 100, height=20, setgrid=True, wrap=WORD,
                  undo=True, pady=2, padx=3)
          self.text.pack(side=LEFT, fill=Y, expand=Y)
-         self.scrollbar = Scrollbar(self, command=self.text.yview,
-orient=VERTICAL)
+         self.scrollbar = Scrollbar(self, command=self.text.yview, orient=VERTICAL)
          self.scrollbar.pack(side = RIGHT, fill = Y)
          self.scrollbar.config(command = self.text.yview)
          self.text.config(yscrollcommand = self.scrollbar.set)
@@ -145,7 +142,7 @@ orient=VERTICAL)
  
  class DisplayMessages(threading.Thread):
      """Display the messages coming in on the com port in """
-    """  the GUI text window.                            """
+     """  the GUI text window.                            """
  
      def __init__(self, port, text_display):
          super().__init__()
