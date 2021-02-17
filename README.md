@@ -226,6 +226,7 @@ The code looks like this:
  except:
      print("Caught Main Exception")
 ```
+Please note that I am using Python version 3.4.0.  This code will not run on the latest version of Python, so please be aware of this if you are having issues.
 
 What amazes me is that the resulting code is so short.  It will also be
 very easy to add additional details to the GUI such as adding a file
